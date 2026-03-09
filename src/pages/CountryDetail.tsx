@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router'
 import { BASE_URL } from '../constants/api'
 import type { ICountry } from '../types/country'
 import { useEffect, useState } from 'react'
+import styles from './CountryDetail.module.css'
 
 const CountryDetail = () => {
   const { id } = useParams()
@@ -15,16 +16,13 @@ const CountryDetail = () => {
   if (!item) return <p>Загрузка...</p>
 
   return (
-      <div style={{
-        padding: '40px'
-      }}>
-      <Link to="/" style={{ 
-        display: 'block', 
-        marginBottom: '20px' }}>Назад к списку</Link>
+      <div className={styles.container}>
+      <Link to="/" className={styles.backLink}>Назад к списку</Link>
       
       <h1>{item.name}</h1>
       <img src={item.flag} width="200" alt="flag" />
       
+      <div className={styles.info}>
       <p><b>1. Столица:</b> {item.capital}</p>
       <p><b>2. Население:</b> {item.population}</p>
       <p><b>3. Регион:</b> {item.region}</p>
@@ -36,6 +34,7 @@ const CountryDetail = () => {
       <p><b>9. Домен:</b> {item.alpha3Code.toLowerCase()}</p>
       <p><b>10. Статус:</b> Планируется</p>
     </div>
+  </div>
   )
 }
   

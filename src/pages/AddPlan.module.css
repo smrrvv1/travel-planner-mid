@@ -1,0 +1,21 @@
+.wrapper { 
+    display: flex; 
+    justify-content: center; 
+    padding: 50px; 
+}
+
+.form { 
+    width: 400px; 
+    background: rgb(255, 255, 255); 
+    padding: 30px; 
+    border-radius: 12px; 
+}
+.saveBtn { 
+    width: 100%; 
+    margin-top: 20px; 
+    background: rgb(196, 50, 128); 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    padding: 12px; 
+    cursor: pointer; 
+}

@@ -15,7 +15,11 @@ const AddPlan = ({ onSave }: { onSave: (c: ICountry) => void }) => {
 
   const handleAdd = () => {
     const found = countries.find(c => c.alpha3Code === selected)
-    if (found) onSave(found)
+    if (found) {
+      onSave(found)
+      alert(`Страна ${found.name} добавлена в список!`)
+      setSelected('')
+    } 
   }
 
   return (

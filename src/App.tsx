@@ -14,11 +14,14 @@ function App() {
       setPlans([...plans, newCountry])
     }
   }
+  const deletePlan = (code: string) => {
+    setPlans(plans.filter(p => p.alpha3Code !== code))
+  }
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Main list={plans} />} />
+        <Route path="/" element={<Main list={plans} onDelete={deletePlan} />} />
         <Route path="/add" element={<AddPlan onSave={addPlan} />} />
         <Route path="/country/:id" element={<CountryDetail />} />
       </Routes>

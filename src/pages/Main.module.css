@@ -19,15 +19,28 @@
     color: #333;
 }
 .btn { 
-    color: rgb(196, 50, 128); 
+    color: rgb(77, 196, 50); 
     text-decoration: none; 
-    border: 2px solid rgb(196, 50, 128); 
+    border: 2px solid rgb(77, 196, 50); 
     padding: 8px 16px; 
     border-radius: 8px;
     font-weight: bold;
 }
 
 .btn:hover {
-    background: rgb(196, 50, 128);
+    background: rgb(28, 114, 46);
+    color: rgb(255, 255, 255);
+}
+
+.deleteBtn {
+    border: 2px solid rgb(196, 50, 128);
+    color: rgb(196, 50, 128);
+    padding: 8px 16px;
+    text-decoration: none; 
+    border-radius: 8px;
+    font-weight: bold;
+}
+.deleteBtn:hover {
+    background: rgb(124, 17, 74);
     color: rgb(255, 255, 255);
 }
